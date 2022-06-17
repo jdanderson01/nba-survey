@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>"Survey - Justice Anderson"</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/process_form.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <a class="active" href="#home">Home</a>
+        <a href="#quizzes">Quizzes</a>
+        <a href="#games">Games</a>
+    </div>
+    <div class="container">
+        <h1 class="header">Who's your NBA legend?</h1>
+        <form action="process.php" method="post" name="myform">
+            <fieldset class="fieldset">
+                <legend class="legend">Entering User Info</legend>
+                <div id="q1">
+                    <label for="first_name_id">First Name:</label>
+                    <input id="first_name_id" type="text" name="first_name_name" value="" />
+                    <span>
+                        <div id="imgDiv"></div>
+                    </span>
+                </div>
+                <div id="q2">
+                    <label for="last_name_id">Last Name:</label>
+                    <input id="last_name_id" type="text" name="last_name_name" value="" />
+                    <span>
+                        <div id="imgDiv_two"></div>
+                    </span>
+                </div>
+                <div id="q3">
+                    <label for="email_id">E-Mail Address:</label>
+                    <input id="email_id" type="text" name="mail_address" value="" />
+                    <span>
+                        <div id="imgDiv_three"></div>
+                    </span>
+                </div>
+                <div id="q4">
+                    <label for="phone_id">Phone Number:</label>
+                    <input id="phone_id" type="text" name="phone_number" value="" />
+                    <span>
+                        <div id="imgDiv_four"></div>
+                    </span>
+                </div>
+                <div id="q5">
+                    <label for="student_id">Students Address:</label>
+                    <input id="student_id" type="text" name="student_address" value="" />
+                    <span>
+                        <div id="imgDiv_five"></div>
+                        <div id="imgDiv_five_two"></div>
+                    </span>
+                </div>
+            </fieldset>
+            <fieldset class="fieldset">
+                <legend class="legend">
+                    Picking your NBA Goat
+                </legend>
+                <p>What do you like doing on the court?</p>
+                <label><input type="radio" name="ability" id="scoring_id" value="Scoring" />Scoring</label>
+                <label><input type="radio" name="ability" id="defending_id" value="Defending" />Defending</label>
+
+                <p>What's your dream superstar trait?</p>
+                <label><input type="radio" name="trait" id="clutchness_id" value="Clutchness" />Clutchness</label>
+                <label><input type="radio" name="trait" id="longevity_id" value="Longevity" />Longevity</label>
+                <input id="submit" type="submit" name="submit" value="Click to Submit" />
+            </fieldset>
+        </form>
+        <div id="last_image"></div>
+        <footer id="footerDiv"></footer>
+    </div>
+</body>
+
+</html>

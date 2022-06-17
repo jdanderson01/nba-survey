@@ -1,0 +1,66 @@
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 65px;
+    background-color: #86592d;
+    position: fixed;
+    height: auto;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: white;
+    padding: 10px;
+  }
+  
+  .sidebar a:hover {
+    background-color: maroon;
+    color: white;
+  }
+  
+  .container {
+    width: 90%;
+    border: 5px solid #86592d;
+    margin: auto;
+    padding: 10px;
+    background-color: burlywood;
+    border-radius: 10px;
+  }
+  
+  .check {
+    display: none;
+  }
+  
+  .header {
+    color: maroon;
+    text-align: center;
+  }
+  
+  .legend {
+    color: maroon;
+    font-weight: bold;
+  }
+  
+  .fieldset {
+    border: 3px solid black;
+    border-radius: 3px;
+  }
+  
+  input[type="submit"] {
+    color: black;
+    font-weight: bold;
+    background-color: maroon;
+  }
+  
+  input[type="text"] {
+    width: 30%;
+    padding: 6px 12px;
+    margin: 8px;
+    border: 2px solid maroon;
+    background-color: #dfbf9f;
+  }
+  
+  label {
+    color: maroon;
+    font-weight: bold;
+  }
