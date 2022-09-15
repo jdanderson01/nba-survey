@@ -277,7 +277,7 @@ function processForm(event) {
           radio_buttons[x].value
         );
       } else {
-        //console.log(radio_buttons[x].value + " button is not checked");
+        console.log(radio_buttons[x].value + " button is not checked");
       }
     }
     let radio_buttons_two = document.myform.elements["trait"];

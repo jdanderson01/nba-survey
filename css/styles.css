@@ -1,66 +1,124 @@
-.sidebar {
-    margin: 0;
-    padding: 0;
-    width: 65px;
-    background-color: #86592d;
-    position: fixed;
-    height: auto;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+p {
+  color: #f8f8f8;
+}
+
+
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #051c2d;
+  color: #f8f8f8;
+}
+
+.logo-text {
+  position: relative;
+  color: #f8f8f8;
+  font-size: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding-right: 990px;
+}
+
+.navbar-links {
+  height: 100%;
+}
+
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+}
+
+
+/* changing hover color to NBA color */
+.navbar-links li:hover {
+  background-color: #C9082A;
+}
+
+.logo-style {
+  position: relative;
+  left: 10px;
+  height: 50px;
+  width: 30px;
+  margin: 5px;
+}
+  
+  
+.container {
+  width: 50%;
+  border: 5px solid #051c2d;
+  margin: auto;
+  margin-top: 50px;
+  padding: 15px;
+  background-color: #0a2c46;
+  border-radius: 10px;
   }
   
-  .sidebar a {
-    display: block;
-    color: white;
-    padding: 10px;
+.check {
+  display: none;
   }
   
-  .sidebar a:hover {
-    background-color: maroon;
-    color: white;
+.header {
+  color: #f8f8f8;
+  text-align: center;
   }
   
-  .container {
-    width: 90%;
-    border: 5px solid #86592d;
-    margin: auto;
-    padding: 10px;
-    background-color: burlywood;
-    border-radius: 10px;
+.legend {
+  color: #f8f8f8;
+  font-weight: bold;
   }
   
-  .check {
-    display: none;
+.fieldset {
+  border: 3px solid black;
+  border-radius: 3px;
   }
   
-  .header {
-    color: maroon;
-    text-align: center;
+input[type="submit"] {
+  color: black;
+  font-weight: bold;
+  background-color: #f8f8f8;
+  border-radius: 5%;
+  margin: 8px;
   }
   
-  .legend {
-    color: maroon;
-    font-weight: bold;
+input[type="text"] {
+  width: 30%;
+  padding: 6px 12px;
+  margin: 8px;
+  border: 2px solid #f8f8f8;
+  background-color: #C9082Ad1;
+  border-radius: 3%;
   }
   
-  .fieldset {
-    border: 3px solid black;
-    border-radius: 3px;
-  }
-  
-  input[type="submit"] {
-    color: black;
-    font-weight: bold;
-    background-color: maroon;
-  }
-  
-  input[type="text"] {
-    width: 30%;
-    padding: 6px 12px;
-    margin: 8px;
-    border: 2px solid maroon;
-    background-color: #dfbf9f;
-  }
-  
-  label {
-    color: maroon;
-    font-weight: bold;
+label {
+  color: #f8f8f8;
+  font-weight: bold;
   }
