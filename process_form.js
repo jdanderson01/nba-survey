@@ -26,7 +26,8 @@ function fnameFocus() {
 }
 
 function fnameBlur() {
-  let myRegEx = /^[a-zA-Z]+$/; /* regular expression to make sure user puts in letters*/
+  let myRegEx =
+    /^[a-zA-Z]+$/; /* regular expression to make sure user puts in letters*/
   let fname = document.myform.first_name_name.value;
   let q1 = document.getElementById("q1");
   let span = q1.getElementsByTagName("span");
@@ -72,7 +73,8 @@ function lnameFocus() {
 }
 
 function lnameBlur() {
-  let myRegEx = /^[a-zA-Z]+$/; /* regular expression to make sure user puts in letters*/
+  let myRegEx =
+    /^[a-zA-Z]+$/; /* regular expression to make sure user puts in letters*/
   let lname = document.myform.last_name_name.value;
   let q2 = document.getElementById("q2");
   let span = q2.getElementsByTagName("span");
@@ -120,7 +122,8 @@ function enameFocus() {
 }
 
 function enameBlur() {
-  let secondRegEx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/; /* regular expression to match email */
+  let secondRegEx =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/; /* regular expression to match email */
   let ename = document.myform.mail_address.value;
   let q3 = document.getElementById("q3");
   let span = q3.getElementsByTagName("span");
@@ -165,7 +168,8 @@ function pnameFocus() {
 }
 
 function pnameBlur() {
-  let thirdRegEx = /^\d{3}-\d{3}-\d{4}$/; /* regular expression to match phone number */
+  let thirdRegEx =
+    /^\d{3}-\d{3}-\d{4}$/; /* regular expression to match phone number */
   let pname = document.myform.phone_number.value;
   let q4 = document.getElementById("q4");
   let span = q4.getElementsByTagName("span");
@@ -212,7 +216,8 @@ function snameFocus() {
 }
 
 function snameBlur() {
-  let fourthRegEx = /^https:\/\/[a-z]+\.[a-z]+.[a-z]+.[a-z]+\/~[0-9a-z]+\/$/; /* regular expression to match student address */
+  let fourthRegEx =
+    /^https:\/\/[a-z]+\.[a-z]+.[a-z]+.[a-z]+\/~[0-9a-z]+\/$/; /* regular expression to match student address */
   let sname = document.myform.student_address.value;
   let q5 = document.getElementById("q5");
   let span = q5.getElementsByTagName("span");
@@ -253,16 +258,16 @@ function processForm(event) {
   } else {
     console.log(
       "First name is: " +
-      document.myform.elements["first_name_name"].value +
-      " and last name is: " +
-      document.myform.elements["last_name_name"].value
+        document.myform.elements["first_name_name"].value +
+        " and last name is: " +
+        document.myform.elements["last_name_name"].value
     );
 
     let footerDiv = document.getElementById("footerDiv");
     let footerText = document.createTextNode(
       "Created by:" +
-      document.myform.elements["first_name_name"].value +
-      document.myform.elements["last_name_name"].value
+        document.myform.elements["first_name_name"].value +
+        document.myform.elements["last_name_name"].value
     );
     while (footerDiv.hasChildNodes()) {
       footerDiv.removeChild(footerDiv.lastChild);
@@ -273,20 +278,20 @@ function processForm(event) {
       if (radio_buttons[x].checked) {
         console.log(
           radio_buttons[x].value +
-          " button is checked and the value is " +
-          radio_buttons[x].value
+            " button is checked and the value is " +
+            radio_buttons[x].value
         );
       } else {
         console.log(radio_buttons[x].value + " button is not checked");
       }
     }
     let radio_buttons_two = document.myform.elements["trait"];
-    for (let x = 0; x < radio_buttons.length; x++)
+    for (let x = 0; x < radio_buttons_two.length; x++)
       if (radio_buttons_two[x].checked) {
         console.log(
           radio_buttons_two[x].value +
-          " button is checked and the value is " +
-          radio_buttons_two[x].value
+            " button is checked and the value is " +
+            radio_buttons_two[x].value
         );
         if (radio_buttons[0].checked && radio_buttons_two[0].checked) {
           while (last_image.hasChildNodes()) {
@@ -294,10 +299,12 @@ function processForm(event) {
           } //stops images from repeating
           console.log("You got Kobe Bryant");
           let img_kobe = document.createElement("img");
-          img_kobe.src = "img/kobe_bryant.jpg";
+          img_kobe.src = "img/kobe_bryant.jpeg";
           let imgDiv_kobe = document.getElementById("last_image");
           imgDiv_kobe.appendChild(img_kobe);
-          let kobeText = document.createTextNode("You got Kobe Bryant!");
+          let kobeText = document.createElement("span");
+          kobeText.textContent = "You got Kobe Bryant!";
+          kobeText.classList.add("result");
           imgDiv_kobe.appendChild(kobeText);
         } else if (radio_buttons[0].checked && radio_buttons_two[1].checked) {
           while (last_image.hasChildNodes()) {
@@ -305,12 +312,13 @@ function processForm(event) {
           }
           console.log("You got Kareem Abdul-Jabbar");
           let img_kareem = document.createElement("img");
-          img_kareem.src = "img/kareem_jabbar.jpg";
+          img_kareem.src = "img/kareem_jabbar.jpeg";
           let imgDiv_kareem = document.getElementById("last_image");
           imgDiv_kareem.appendChild(img_kareem);
           let kareemText = document.createTextNode(
             "You got Kareem Abdul-Jabbar!"
           );
+          kareemText.classList.add("result");
           imgDiv_kareem.appendChild(kareemText);
         } else if (radio_buttons[1].checked && radio_buttons_two[1].checked) {
           while (last_image.hasChildNodes()) {
@@ -318,10 +326,11 @@ function processForm(event) {
           }
           console.log("You got Tim Duncan");
           let img_duncan = document.createElement("img");
-          img_duncan.src = "img/tim_duncan.jpg";
+          img_duncan.src = "img/tim_duncan.jpeg";
           let imgDiv_duncan = document.getElementById("last_image");
           imgDiv_duncan.appendChild(img_duncan);
           let duncanText = document.createTextNode("You got Tim Duncan!");
+          duncanText.classList.add("result");
           imgDiv_duncan.appendChild(duncanText);
         } else if (radio_buttons[1].checked && radio_buttons_two[0].checked) {
           while (last_image.hasChildNodes()) {
@@ -329,10 +338,11 @@ function processForm(event) {
           }
           console.log("You got Hakem Olajuwon");
           let img_hakeem = document.createElement("img");
-          img_hakeem.src = "img/hakeem_olajuwon.jpg";
+          img_hakeem.src = "img/hakeem_olajuwon.jpeg";
           let imgDiv_hakeem = document.getElementById("last_image");
           imgDiv_hakeem.appendChild(img_hakeem);
           let hakeemText = document.createTextNode("You got Hakeem Olajuwon!");
+          hakeemText.classList.add("result");
           imgDiv_hakeem.appendChild(hakeemText);
         }
       }
